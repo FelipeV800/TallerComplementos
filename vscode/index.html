@@ -10,35 +10,8 @@
 
 <body>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-
-    <script>
-
-        //Scene
-        var scene = new THREE.Scene();
-        scene.background = new THREE.Color(0x18B0F0);
-
-        //Camera
-        var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight);
-
-        //Render
-        var renderer = new THREE.WebGLRenderer();
-        renderer.setSize(window.innerWidth, window.innerHeight);
-        document.body.appendChild(renderer.domElement);
-        renderer.render(scene, camera);
-
-
-
-        const geometry = new THREE.BoxGeometry();
-        const material = new THREE.MeshBasicMaterial({ color: 0x19FA82 });
-        const cube = new THREE.Mesh(geometry, material);
-        scene.add(cube);
-
-
-        camera.position.z = 5;
-        renderer.render(scene, camera);
-
-    </script>
+    <script src="index.js" type="module"></script>
+    <div id="stats"></div>
 
 </body>
 
